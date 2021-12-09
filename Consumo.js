@@ -1,6 +1,68 @@
 //GET /{lang}/datos/{category}/{widget}?[query]
 //apidatos.ree.es
 
+class Balance {
+  static Get(perfil){}
+}
+class Demanda{
+  static GetEvolucion(perfil){}
+  static GetVariacionComponentes(perfil){}
+  static GetVariacionComponentesMovil(perfil){}
+  static GetIreGeneral(perfil){}
+  static GetIreGeneralAnual(perfil){}
+  static GetIreGeneralMovil(perfil){}
+  static GetIreIndustria(perfil){}
+  static GetIreIndustriaAnual(perfil){}
+  static GetIreIndustriaMovil(perfil){}
+  static GetIreServicios(perfil){}
+  static GetIreServiciosAnual(perfil){}
+  static GetIreServiciosMovil(perfil){}
+  static GetIreOtras(perfil){}
+  static GetIreOtrasAnual(perfil){}
+  static GetIreOtrasMovil(perfil){}
+  static GetDemandaMaximaDiaria(perfil){}
+  static GetDemandaMaximaHoraria(perfil){}
+  static GetPerdidasTransporte(perfil){}
+  static GetPotenciaMaximaInstantanea(perfil){}
+  static GetVariacionDemanda(perfil){}
+  static GetPotenciaMaximaInstantaneaVariacion(perfil){}
+  static GetPotenciaMaximaInstantaneaVariacionHistorico(perfil){}
+  static GetDemandaTiempoReal(perfil){}
+  static GetVariacionComponentesAnual(perfil){}
+
+}
+class Generacion{
+  static GetEstructuraGeneracion(perfil){}
+  static GetEvolucionRenovableNoRenovable(perfil){}
+  static GetEstructuraRenovables(perfil){}
+  static GetEstructuraGeneracionEmisionesAsociadas(perfil){}
+  static GetEvolucionEstructuraGeneracionEmisionesAsociadas(perfil){}
+  static GetNoRenovablesDetalleEmisionesCO2(perfil){}
+  static GetMaximaRenovable(perfil){}
+  static GetPotenciaInstalada(perfil){}
+  static GetMaximaRenovableHistorico(perfil){}
+  static GetMaximaSinEmisionesHistorico(perfil){}
+
+}
+class Intercambios{
+
+
+}
+class Transporte{}
+class Mercados{}
+
+
+
+class Perfil{
+  const URI='apidatos.ree.es';
+  construct() {
+    this.Idioma=Idioma.Spanish;
+    this.GeoId=GeoId.Catalunya;
+    this.GeoLimit=GeoLimit.ComunidadAutonoma;
+    this.Inicio=null;
+    this.Fin=null;
+  }
+}
 class GeoLimit{
 
   const Peninsular='peninsular';
@@ -10,14 +72,6 @@ class GeoLimit{
   const Ceuta='ceuta';
   const Melilla='melilla';
 
-}
-class Categoria{
-  const Balance='balance';
-  const Demanada='demanda';
-  const Generacion='generacion';
-  const Intercambios='intercambios';
-  const Transporte='transporte';
-  const Mercados='mercados';
 }
 
 class Idioma{
