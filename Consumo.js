@@ -78,157 +78,22 @@ class Transporte{
 
 }
 class Mercados{
-componentes-precio-energia-cierre-desglose
-
- 
-
-	
-
- 
-
-	
-
-componentes-precio
-
- 
-
-	
-
- 
-
-	
-
-energia-gestionada-servicios-ajuste
-
- 
-
-	
-
- 
-
-	
-
-energia-restricciones
-
- 
-
-	
-
- 
-
-	
-
-precios-restricciones
-
- 
-
-	
-
- 
-
-	
-
-reserva-potencia-adicional
-
- 
-
-	
-
- 
-
-	
-
-banda-regulacion-secundaria
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-regulacion-secundaria
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-regulacion-terciaria
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-gestion-desvios
-
- 
-
-	
-
- 
-
-	
-
-coste-servicios-ajuste
-
- 
-
-	
-
- 
-
-	
-
-volumen-energia-servicios-ajuste-variacion
-
- 
-
-	
-
- 
-
-	
-
-precios-mercados-tiempo-real
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-ponderados-gestion-desvios-before
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-ponderados-gestion-desvios
-
- 
-
-	
-
- 
-
-	
-
-energia-precios-ponderados-gestion-desvios-after
+	static GetComponentesPrecioEnergiaCierreDesglose(perfil){}
+static GetComponentesPrecio(perfil){}
+static GetEnergiaGestionadaServiciosAjuste(perfil){}
+static GetEnergiaRestricciones(perfil){}
+static GetPreciosRestricciones(perfil){}
+static GetReservaPotenciaAdicional(perfil){}
+static GetBandaRegulacionSecundaria(perfil){}
+static GetEnergiaPreciosRegulacionSecundaria(perfil){}
+static GetEnergiaPreciosRegulacionTerciaria(perfil){}
+static GetEnergiaPreciosGestionDesvios(perfil){}
+static GetCosteServiciosAjuste(perfil){}
+static GetVolumenEnergiaServiciosAjusteVariacion(perfil){}
+static GetPreciosMercadosTiempoReal(perfil){}
+static GetEnergiaPreciosPonderadosGestionDesviosBefore(perfil){}
+static GetEnergiaPreciosPonderadosGestionDesvios(perfil){}
+static GetEnergiaPreciosPonderadosGersionDesviosAfter(perfil){}
 
 }
 
