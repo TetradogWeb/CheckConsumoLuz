@@ -296,7 +296,9 @@ class Perfil{
   }
   
   GetUrl(categoria,widget){
-  	var strUrl= $"{Perfil.URL}/{categoria}/{widget}";
+	  // /{lang}/datos/{category}/{widget}?[query]
+	var lang=this.Idioma==Null?Idioma.Spanish:this.Idioma;
+  	var strUrl= $"{Perfil.URL}/{lang}/datos/{categoria}/{widget}";
 	var strQuery=this.GetQueryString();
 	if(strQuery!=Null){
 		strUrl+='?'+strQuery;
