@@ -45,11 +45,192 @@ class Generacion{
 
 }
 class Intercambios{
+  static GetFronteraFrancia(perfil){}
+  static GetFronteraPortugal(perfil){}
+  static GetFronteraMarruecos(perfil){}
+  static GetFronteraAndorra(perfil){}
+  static GetLineasFrancia(perfil){}
+  static GetLineasPortugal(perfil){}
+  static GetLineasMarruecos(perfil){}
+  static GetLineasAndorra(perfil){}
+  static GetFronteraProgramadoFrancia(perfil){}
+  static GetFronteraProgramadoPortugal(perfil){}
+  static GetFronteraProgramadoMarruecos(perfil){}
+  static GetFronteraProgramadoAndorra(perfil){}
+  static GetEnlaceBaleares(perfil){}
+  static GetFronteraFisicos(perfil){}
+  static GetFronteraTodasFisicos(perfil){}
+  static GetFronteraProgramados(perfil){}
+  static GetFronterasTodasProgramados(perfil){}
+
+}
+class Transporte{
+  
+  static GetEnergiaNoSuministradaEns(perfil){}
+  static GetIndiceIndisponibilidad(perfil){}
+  static GetTiempoInterrupcionMedioTim(perfil){}
+  static GetKilometrosLineas(perfil){}
+  static GetIndiceDisponibilidad(perfil){}
+  static GetNumeroCortes(perfil){}
+  static GetEnsTim(perfil){}
+  static GetIndiceDisponibilidadTotal(perfil){}
 
 
 }
-class Transporte{}
-class Mercados{}
+class Mercados{
+componentes-precio-energia-cierre-desglose
+
+ 
+
+	
+
+ 
+
+	
+
+componentes-precio
+
+ 
+
+	
+
+ 
+
+	
+
+energia-gestionada-servicios-ajuste
+
+ 
+
+	
+
+ 
+
+	
+
+energia-restricciones
+
+ 
+
+	
+
+ 
+
+	
+
+precios-restricciones
+
+ 
+
+	
+
+ 
+
+	
+
+reserva-potencia-adicional
+
+ 
+
+	
+
+ 
+
+	
+
+banda-regulacion-secundaria
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-regulacion-secundaria
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-regulacion-terciaria
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-gestion-desvios
+
+ 
+
+	
+
+ 
+
+	
+
+coste-servicios-ajuste
+
+ 
+
+	
+
+ 
+
+	
+
+volumen-energia-servicios-ajuste-variacion
+
+ 
+
+	
+
+ 
+
+	
+
+precios-mercados-tiempo-real
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-ponderados-gestion-desvios-before
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-ponderados-gestion-desvios
+
+ 
+
+	
+
+ 
+
+	
+
+energia-precios-ponderados-gestion-desvios-after
+
+}
 
 
 
