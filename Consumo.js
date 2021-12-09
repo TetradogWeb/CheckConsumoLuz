@@ -260,7 +260,7 @@ class Mercados{
 
 
 class Perfil{
-  static const URI='apidatos.ree.es';
+  static get URI(){return 'apidatos.ree.es';}
   construct() {
 	this.Idioma=Idioma.Spanish;
 	this.GeoId=Null;
@@ -308,80 +308,80 @@ class Perfil{
 }
 
 class GeoTrunc{
-static const ElectricSystem='electric_system';
+static get ElectricSystem(){return 'electric_system';}
 
 }
 class GeoLimit{
 
-  static const Peninsular='peninsular';
-  static const ComunidadAutonoma='ccaa';
-  static const Canarias='canarias';
-  static const Baleares='baleares';
-  static const Ceuta='ceuta';
-  static const Melilla='melilla';
+  static get Peninsular(){return 'peninsular';}
+  static get ComunidadAutonoma(){return 'ccaa';}
+  static get Canarias(){return 'canarias';}
+  static get Baleares(){return 'baleares';}
+  static get Ceuta(){return 'ceuta';}
+  static get Melilla(){return 'melilla';}
 
 }
 
 class Idioma{
-  static const Spanish='es';
-  static const English='en';
+  static get Spanish(){return 'es';}
+  static get English(){return 'en';}
 
 }
 class TimeTrunc{
-	static const Hour='hour';
-	static const Day='day';
-	static const Month='month';
-	static const Year='year';
+	static get Hour(){return 'hour';}
+	static get Day(){return 'day';}
+	static get Month(){return 'month';}
+	static get Year(){return 'year';}
 }
 
 class GeoId{
 
   
-  static const Peninsular =8741;
-  static const Canarias =8742;
-  static const Baleares =8743;
+  static get Peninsular(){return 8741;}
+  static get Canarias(){return 8742;}
+  static get Baleares(){return 8743;}
 
-  static const Ceuta =8744;
+  static get Ceuta(){return 8744;}
 
-  static const Melilla =8745;
+  static get Melilla(){return 8745;}
 
-  static const Andalucia= 4;
+  static get Andalucia(){return 4;}
 
-  static const Aragon= 5;
+  static get Aragon(){return 5;}
 
-  static const Cantabria= 6;
+  static get Cantabria(){return  6;}
 
-  static const CastillaLaMancha= 7;
+  static get CastillaLaMancha(){return  7;}
 
-  static const CastillaYLeon= 8;
+  static get CastillaYLeon(){return  8;}
 
-  static const Catalunya= 9;
+  static get Catalunya(){return  9;}
 
-  static const PaisVasco= 10;
+  static get PaisVasco(){return  10;}
 
-  static const PrincipadoDeAsturias= 11;
+  static get PrincipadoDeAsturias(){return  11;}
 
-  static const ComunidadDeCeuta= 8744;
+  static get ComunidadDeCeuta(){return  8744;}
 
-  static const ComunidadDeMelilla= 8745;
+  static get ComunidadDeMelilla(){return  8745;}
 
-  static const ComunidadDeMadrid= 13;
+  static get ComunidadDeMadrid(){return  13;}
 
-  static const ComunidadDeNavarra= 14;
+  static get ComunidadDeNavarra(){return  14;}
 
-  static const ComunidadValenciana= 15;
+  static get ComunidadValenciana(){return  15;}
 
-  static const Extremadura= 16;
+  static get Extremadura(){return  16;}
 
-  static const Galicia= 17;
+  static get Galicia(){return  17;}
 
-  static const IslasBaleares= 8743;
+  static get IslasBaleares(){return  8743;}
 
-  static const IslasCanarias= 8742;
+  static get IslasCanarias(){return 8742;}
 
-  static const LaRioja= 20;
+  static get LaRioja(){return 20;}
 
-  static const RegionDeMurcia= 21;
+  static get RegionDeMurcia(){return  21;}
 
 
 }
