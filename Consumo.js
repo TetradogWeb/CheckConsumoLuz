@@ -90,68 +90,170 @@ class Demanda extends Response{
 
 }
 class Generacion{
-	static GetEstructuraGeneracion(perfil){}
-	static GetEvolucionRenovableNoRenovable(perfil){}
-	static GetEstructuraRenovables(perfil){}
-	static GetEstructuraGeneracionEmisionesAsociadas(perfil){}
-	static GetEvolucionEstructuraGeneracionEmisionesAsociadas(perfil){}
-	static GetNoRenovablesDetalleEmisionesCO2(perfil){}
-	static GetMaximaRenovable(perfil){}
-	static GetPotenciaInstalada(perfil){}
-	static GetMaximaRenovableHistorico(perfil){}
-	static GetMaximaSinEmisionesHistorico(perfil){}
+	static GetEstructuraGeneracion(perfil){
+		return this.BaseGet(perfil,'estructura-generacion');
+	}
+	static GetEvolucionRenovableNoRenovable(perfil){
+		return this.BaseGet(perfil,'evolucion-renovable-no-renovable');
+	}
+	static GetEstructuraRenovables(perfil){
+		return this.BaseGet(perfil,'estructura-renovables');
+	}
+	static GetEstructuraGeneracionEmisionesAsociadas(perfil){
+		return this.BaseGet(perfil,'estructura-generacion-emisiones-asociadas');
+	}
+	static GetEvolucionEstructuraGeneracionEmisionesAsociadas(perfil){
+		return this.BaseGet(perfil,'evolucion-estructura-generacion-emisiones-asociadas');
+	}
+	static GetNoRenovablesDetalleEmisionesCO2(perfil){
+		return this.BaseGet(perfil,'no-renovables-detalle-emisiones-CO2');
+	}
+	static GetMaximaRenovable(perfil){
+		return this.BaseGet(perfil,'maxima-renovable');
+	}
+	static GetPotenciaInstalada(perfil){
+		return this.BaseGet(perfil,'potencia-instalada');
+	}
+	static GetMaximaRenovableHistorico(perfil){
+		return this.BaseGet(perfil,'maxima-renovable-historico');
+	}
+	static GetMaximaSinEmisionesHistorico(perfil){
+		return this.BaseGet(perfil,'maxima-sin-emisiones-historico');
+	}
 
 }
 class Intercambios{
-	static GetFronteraFrancia(perfil){}
-	static GetFronteraPortugal(perfil){}
-	static GetFronteraMarruecos(perfil){}
-	static GetFronteraAndorra(perfil){}
-	static GetLineasFrancia(perfil){}
-	static GetLineasPortugal(perfil){}
-	static GetLineasMarruecos(perfil){}
-	static GetLineasAndorra(perfil){}
-	static GetFronteraProgramadoFrancia(perfil){}
-	static GetFronteraProgramadoPortugal(perfil){}
-	static GetFronteraProgramadoMarruecos(perfil){}
-	static GetFronteraProgramadoAndorra(perfil){}
-	static GetEnlaceBaleares(perfil){}
-	static GetFronteraFisicos(perfil){}
-	static GetFronteraTodasFisicos(perfil){}
-	static GetFronteraProgramados(perfil){}
-	static GetFronterasTodasProgramados(perfil){}
+	static GetFronteraFrancia(perfil){
+		return this.BaseGet(perfil,'francia-frontera');
+	}
+	static GetFronteraPortugal(perfil){
+		return this.BaseGet(perfil,'portugal-frontera');
+	}
+	static GetFronteraMarruecos(perfil){
+		return this.BaseGet(perfil,'marruecos-frontera');
+	}
+	static GetFronteraAndorra(perfil){
+		return this.BaseGet(perfil,'andorra-frontera');
+	}
+	static GetLineasFrancia(perfil){
+		return this.BaseGet(perfil,'lineas-francia');
+	}
+	static GetLineasPortugal(perfil){
+		return this.BaseGet(perfil,'lineas-portugal');
+	}
+	static GetLineasMarruecos(perfil){
+		return this.BaseGet(perfil,'lineas-marruecos');
+	}
+	static GetLineasAndorra(perfil){
+		return this.BaseGet(perfil,'lineas-andorra');
+	}
+	static GetFronteraProgramadoFrancia(perfil){
+		return this.BaseGet(perfil,'francia-frontera-programado');
+	}
+	static GetFronteraProgramadoPortugal(perfil){
+		return this.BaseGet(perfil,'portugal-frontera-programado');
+	}
+	static GetFronteraProgramadoMarruecos(perfil){
+		return this.BaseGet(perfil,'marruecos-frontera-programado');
+	}
+	static GetFronteraProgramadoAndorra(perfil){
+		return this.BaseGet(perfil,'andorra-frontera-programado');
+	}
+	static GetEnlaceBaleares(perfil){
+		return this.BaseGet(perfil,'enlace-baleares');
+	}
+	static GetFronteraFisicos(perfil){
+		return this.BaseGet(perfil,'frontera-fisicos');
+	}
+	static GetFronteraTodasFisicos(perfil){
+		return this.BaseGet(perfil,'todas-fronteras-fisicos');
+	}
+	static GetFronteraProgramados(perfil){
+		return this.BaseGet(perfil,'frontera-programados');
+	}
+	static GetFronterasTodasProgramados(perfil){
+		return this.BaseGet(perfil,'todas-fronteras-programados');
+	}
 
 }
 class Transporte{
   
-	static GetEnergiaNoSuministradaEns(perfil){}
-	static GetIndiceIndisponibilidad(perfil){}
-	static GetTiempoInterrupcionMedioTim(perfil){}
-	static GetKilometrosLineas(perfil){}
-	static GetIndiceDisponibilidad(perfil){}
-	static GetNumeroCortes(perfil){}
-	static GetEnsTim(perfil){}
-	static GetIndiceDisponibilidadTotal(perfil){}
+	static GetEnergiaNoSuministradaEns(perfil){
+		return this.BaseGet(perfil,'energia-no-suministrada-ens');
+	}
+	static GetIndiceIndisponibilidad(perfil){
+		return this.BaseGet(perfil,'indice-indisponibilidad');
+	}
+	static GetTiempoInterrupcionMedioTim(perfil){
+		return this.BaseGet(perfil,'tiempo-interrupcion-medio-tim');
+	}
+	static GetKilometrosLineas(perfil){
+		return this.BaseGet(perfil,'kilometros-lineas');
+	}
+	static GetIndiceDisponibilidad(perfil){
+		return this.BaseGet(perfil,'indice-disponibilidad');
+	}
+	static GetNumeroCortes(perfil){
+		return this.BaseGet(perfil,'numero-cortes');
+	}
+	static GetEnsTim(perfil){
+		return this.BaseGet(perfil,'ens-tim');
+	}
+	static GetIndiceDisponibilidadTotal(perfil){
+		return this.BaseGet(perfil,'indice-disponibilidad-total');
+	}
 
 
 }
 class Mercados{
-	static GetComponentesPrecioEnergiaCierreDesglose(perfil){}
-	static GetComponentesPrecio(perfil){}
-	static GetEnergiaGestionadaServiciosAjuste(perfil){}
-	static GetEnergiaRestricciones(perfil){}
-	static GetPreciosRestricciones(perfil){}
-	static GetReservaPotenciaAdicional(perfil){}
-	static GetBandaRegulacionSecundaria(perfil){}
-	static GetEnergiaPreciosRegulacionSecundaria(perfil){}
-	static GetEnergiaPreciosRegulacionTerciaria(perfil){}
-	static GetEnergiaPreciosGestionDesvios(perfil){}
-	static GetCosteServiciosAjuste(perfil){}
-	static GetVolumenEnergiaServiciosAjusteVariacion(perfil){}
-	static GetPreciosMercadosTiempoReal(perfil){}
-	static GetEnergiaPreciosPonderadosGestionDesviosBefore(perfil){}
-	static GetEnergiaPreciosPonderadosGestionDesvios(perfil){}
-	static GetEnergiaPreciosPonderadosGersionDesviosAfter(perfil){}
+	static GetComponentesPrecioEnergiaCierreDesglose(perfil){
+		return this.BaseGet(perfil,'componentes-precio-energia-cierre-desglose');
+	}
+	static GetComponentesPrecio(perfil){
+		return this.BaseGet(perfil,'componentes-precio');
+	}
+	static GetEnergiaGestionadaServiciosAjuste(perfil){
+		return this.BaseGet(perfil,'energia-gestionada-servicios-ajuste');
+	}
+	static GetEnergiaRestricciones(perfil){
+		return this.BaseGet(perfil,'energia-restricciones');
+	}
+	static GetPreciosRestricciones(perfil){
+		return this.BaseGet(perfil,'precios-restricciones');
+	}
+	static GetReservaPotenciaAdicional(perfil){
+		return this.BaseGet(perfil,'reserva-potencia-adicional');
+	}
+	static GetBandaRegulacionSecundaria(perfil){
+		return this.BaseGet(perfil,'banda-regulacion-secundaria');
+	}
+	static GetEnergiaPreciosRegulacionSecundaria(perfil){
+		return this.BaseGet(perfil,'energia-precios-regulacion-secundaria');
+	}
+	static GetEnergiaPreciosRegulacionTerciaria(perfil){
+		return this.BaseGet(perfil,'energia-precios-regulacion-terciaria');
+	}
+	static GetEnergiaPreciosGestionDesvios(perfil){
+		return this.BaseGet(perfil,'energia-precios-gestion-desvios');
+	}
+	static GetCosteServiciosAjuste(perfil){
+		return this.BaseGet(perfil,'coste-servicios-ajuste');
+	}
+	static GetVolumenEnergiaServiciosAjusteVariacion(perfil){
+		return this.BaseGet(perfil,'volumen-energia-servicios-ajuste-variacion');
+	}
+	static GetPreciosMercadosTiempoReal(perfil){
+		return this.BaseGet(perfil,'precios-mercados-tiempo-real');
+	}
+	static GetEnergiaPreciosPonderadosGestionDesviosAntes(perfil){
+		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios-before');
+	}
+	static GetEnergiaPreciosPonderadosGestionDesvios(perfil){
+		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios');
+	}
+	static GetEnergiaPreciosPonderadosGersionDesviosDespues(perfil){
+		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios-after');
+	}
 
 }
 
@@ -179,9 +281,6 @@ class Perfil{
 	}
 	if(this.GeoTrunc!=Null){
 		strQuery+='geo_trunc='+this.GeoTrunc+'&';
-	}
-	if(this.GeoId!=Null){
-		strQuery+='geo_ids='+this.GeoId+'&';
 	}
 	if(this.TimeTrunc!=Null){
 		strQuery+='time_trunc='+this.TimeTrunc+'&';
