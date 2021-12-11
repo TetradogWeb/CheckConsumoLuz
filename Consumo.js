@@ -2,257 +2,257 @@
 //apidatos.ree.es
 
 class Response{
-	static BaseGet(perfil,widget){
-		var strUrl=perfil.GetUrl(this.constructor.name,widget);
+	static BaseGet(perfil,categoria,widget){
+		var strUrl=perfil.GetUrl(categoria,widget);
 		return fetch(strUrl).then(response => response.json());
 	
 	}
 }
 
-class Balance  extends Response{
+class Balance {
 	static Get(perfil){
-		return this.BaseGet(perfil,'balance-electrico');
+		return Response.BaseGet(perfil,'balance','balance-electrico');
 	}
 }
-class Demanda extends Response{
+class Demanda{
 	static GetEvolucion(perfil){
-		return this.BaseGet(perfil,'evolucion');
+		return Response.BaseGet(perfil,'demanda','evolucion');
 	}
 	static GetVariacionComponentes(perfil){
-		return this.BaseGet(perfil,'variacion-componentes');
+		return Response.BaseGet(perfil,'demanda','variacion-componentes');
 	}
 	static GetVariacionComponentesMovil(perfil){
-		return this.BaseGet(perfil,'variacion-componentes-movil');
+		return Response.BaseGet(perfil,'demanda','variacion-componentes-movil');
 	}
 	static GetIreGeneral(perfil){
-		return this.BaseGet(perfil,'ire-general');
+		return Response.BaseGet(perfil,'demanda','ire-general');
 	}
 	static GetIreGeneralAnual(perfil){
-		return this.BaseGet(perfil,'ire-general-anual');
+		return Response.BaseGet(perfil,'demanda','ire-general-anual');
 	}
 	static GetIreGeneralMovil(perfil){
-		return this.BaseGet(perfil,'ire-general-movil');
+		return Response.BaseGet(perfil,'demanda','ire-general-movil');
 	}
 	static GetIreIndustria(perfil){
-		return this.BaseGet(perfil,'ire-industria');
+		return Response.BaseGet(perfil,'demanda','ire-industria');
 	}
 	static GetIreIndustriaAnual(perfil){
-		return this.BaseGet(perfil,'ire-industria-anual');
+		return Response.BaseGet(perfil,'demanda','ire-industria-anual');
 	}
 	static GetIreIndustriaMovil(perfil){
-		return this.BaseGet(perfil,'ire-industria-movil');
+		return Response.BaseGet(perfil,'demanda','ire-industria-movil');
 	}
 	static GetIreServicios(perfil){
-		return this.BaseGet(perfil,'ire-servicios');
+		return Response.BaseGet(perfil,'demanda','ire-servicios');
 	}
 	static GetIreServiciosAnual(perfil){
-		return this.BaseGet(perfil,'ire-servicios-anual');
+		return Response.BaseGet(perfil,'demanda','ire-servicios-anual');
 	}
 	static GetIreServiciosMovil(perfil){
-		return this.BaseGet(perfil,'ire-servicios-movil');
+		return Response.BaseGet(perfil,'demanda','ire-servicios-movil');
 	}
 	static GetIreOtras(perfil){
-		return this.BaseGet(perfil,'ire-otras');
+		return Response.BaseGet(perfil,'demanda','ire-otras');
 	}
 	static GetIreOtrasAnual(perfil){
-		return this.BaseGet(perfil,'ire-otras-anual');
+		return Response.BaseGet(perfil,'demanda','ire-otras-anual');
 	}
 	static GetIreOtrasMovil(perfil){
-		return this.BaseGet(perfil,'ire-otras-movil');
+		return Response.BaseGet(perfil,'demanda','ire-otras-movil');
 	}
 	static GetDemandaMaximaDiaria(perfil){
-		return this.BaseGet(perfil,'demanda-maxima-diaria');
+		return Response.BaseGet(perfil,'demanda','demanda-maxima-diaria');
 	}
 	static GetDemandaMaximaHoraria(perfil){
-		return this.BaseGet(perfil,'demanda-maxima-horaria');
+		return Response.BaseGet(perfil,'demanda','demanda-maxima-horaria');
 	}
 	static GetPerdidasTransporte(perfil){
-		return this.BaseGet(perfil,'perdidas-transporte');
+		return Response.BaseGet(perfil,'demanda','perdidas-transporte');
 	}
 	static GetPotenciaMaximaInstantanea(perfil){
-		return this.BaseGet(perfil,'potencia-maxima-instantanea');
+		return Response.BaseGet(perfil,'demanda','potencia-maxima-instantanea');
 	}
 	static GetVariacionDemanda(perfil){
-		return this.BaseGet(perfil,'variacion-demanda');
+		return Response.BaseGet(perfil,'demanda','variacion-demanda');
 	}
 	static GetPotenciaMaximaInstantaneaVariacion(perfil){
-		return this.BaseGet(perfil,'potencia-maxima-instantanea-variacion');
+		return Response.BaseGet(perfil,'demanda','potencia-maxima-instantanea-variacion');
 	}
 	static GetPotenciaMaximaInstantaneaVariacionHistorico(perfil){
-		return this.BaseGet(perfil,'potencia-maxima-instantanea-variacion-historico');
+		return Response.BaseGet(perfil,'demanda','potencia-maxima-instantanea-variacion-historico');
 	}
 	static GetDemandaTiempoReal(perfil){
-		return this.BaseGet(perfil,'demanda-tiempo-real');
+		return Response.BaseGet(perfil,'demanda','demanda-tiempo-real');
 	}
 	static GetVariacionComponentesAnual(perfil){
-		return this.BaseGet(perfil,'variacion-componentes-anual');
+		return Response.BaseGet(perfil,'demanda','variacion-componentes-anual');
 	}
 
 }
 class Generacion{
 	static GetEstructuraGeneracion(perfil){
-		return this.BaseGet(perfil,'estructura-generacion');
+		return Response.BaseGet(perfil,'generacion','estructura-generacion');
 	}
 	static GetEvolucionRenovableNoRenovable(perfil){
-		return this.BaseGet(perfil,'evolucion-renovable-no-renovable');
+		return Response.BaseGet(perfil,'generacion','evolucion-renovable-no-renovable');
 	}
 	static GetEstructuraRenovables(perfil){
-		return this.BaseGet(perfil,'estructura-renovables');
+		return Response.BaseGet(perfil,'generacion','estructura-renovables');
 	}
 	static GetEstructuraGeneracionEmisionesAsociadas(perfil){
-		return this.BaseGet(perfil,'estructura-generacion-emisiones-asociadas');
+		return Response.BaseGet(perfil,'generacion','estructura-generacion-emisiones-asociadas');
 	}
 	static GetEvolucionEstructuraGeneracionEmisionesAsociadas(perfil){
-		return this.BaseGet(perfil,'evolucion-estructura-generacion-emisiones-asociadas');
+		return Response.BaseGet(perfil,'generacion','evolucion-estructura-generacion-emisiones-asociadas');
 	}
 	static GetNoRenovablesDetalleEmisionesCO2(perfil){
-		return this.BaseGet(perfil,'no-renovables-detalle-emisiones-CO2');
+		return Response.BaseGet(perfil,'generacion','no-renovables-detalle-emisiones-CO2');
 	}
 	static GetMaximaRenovable(perfil){
-		return this.BaseGet(perfil,'maxima-renovable');
+		return Response.BaseGet(perfil,'generacion','maxima-renovable');
 	}
 	static GetPotenciaInstalada(perfil){
-		return this.BaseGet(perfil,'potencia-instalada');
+		return Response.BaseGet(perfil,'generacion','potencia-instalada');
 	}
 	static GetMaximaRenovableHistorico(perfil){
-		return this.BaseGet(perfil,'maxima-renovable-historico');
+		return Response.BaseGet(perfil,'generacion','maxima-renovable-historico');
 	}
 	static GetMaximaSinEmisionesHistorico(perfil){
-		return this.BaseGet(perfil,'maxima-sin-emisiones-historico');
+		return Response.BaseGet(perfil,'generacion','maxima-sin-emisiones-historico');
 	}
 
 }
 class Intercambios{
 	static GetFronteraFrancia(perfil){
-		return this.BaseGet(perfil,'francia-frontera');
+		return Response.BaseGet(perfil,'intercambios','francia-frontera');
 	}
 	static GetFronteraPortugal(perfil){
-		return this.BaseGet(perfil,'portugal-frontera');
+		return Response.BaseGet(perfil,'intercambios','portugal-frontera');
 	}
 	static GetFronteraMarruecos(perfil){
-		return this.BaseGet(perfil,'marruecos-frontera');
+		return Response.BaseGet(perfil,'intercambios','marruecos-frontera');
 	}
 	static GetFronteraAndorra(perfil){
-		return this.BaseGet(perfil,'andorra-frontera');
+		return Response.BaseGet(perfil,'intercambios','andorra-frontera');
 	}
 	static GetLineasFrancia(perfil){
-		return this.BaseGet(perfil,'lineas-francia');
+		return Response.BaseGet(perfil,'intercambios','lineas-francia');
 	}
 	static GetLineasPortugal(perfil){
-		return this.BaseGet(perfil,'lineas-portugal');
+		return Response.BaseGet(perfil,'intercambios','lineas-portugal');
 	}
 	static GetLineasMarruecos(perfil){
-		return this.BaseGet(perfil,'lineas-marruecos');
+		return Response.BaseGet(perfil,'intercambios','lineas-marruecos');
 	}
 	static GetLineasAndorra(perfil){
-		return this.BaseGet(perfil,'lineas-andorra');
+		return Response.BaseGet(perfil,'intercambios','lineas-andorra');
 	}
 	static GetFronteraProgramadoFrancia(perfil){
-		return this.BaseGet(perfil,'francia-frontera-programado');
+		return Response.BaseGet(perfil,'intercambios','francia-frontera-programado');
 	}
 	static GetFronteraProgramadoPortugal(perfil){
-		return this.BaseGet(perfil,'portugal-frontera-programado');
+		return Response.BaseGet(perfil,'intercambios','portugal-frontera-programado');
 	}
 	static GetFronteraProgramadoMarruecos(perfil){
-		return this.BaseGet(perfil,'marruecos-frontera-programado');
+		return Response.BaseGet(perfil,'intercambios','marruecos-frontera-programado');
 	}
 	static GetFronteraProgramadoAndorra(perfil){
-		return this.BaseGet(perfil,'andorra-frontera-programado');
+		return Response.BaseGet(perfil,'intercambios','andorra-frontera-programado');
 	}
 	static GetEnlaceBaleares(perfil){
-		return this.BaseGet(perfil,'enlace-baleares');
+		return Response.BaseGet(perfil,'intercambios','enlace-baleares');
 	}
 	static GetFronteraFisicos(perfil){
-		return this.BaseGet(perfil,'frontera-fisicos');
+		return Response.BaseGet(perfil,'intercambios','frontera-fisicos');
 	}
 	static GetFronteraTodasFisicos(perfil){
-		return this.BaseGet(perfil,'todas-fronteras-fisicos');
+		return Response.BaseGet(perfil,'intercambios','todas-fronteras-fisicos');
 	}
 	static GetFronteraProgramados(perfil){
-		return this.BaseGet(perfil,'frontera-programados');
+		return Response.BaseGet(perfil,'intercambios','frontera-programados');
 	}
 	static GetFronterasTodasProgramados(perfil){
-		return this.BaseGet(perfil,'todas-fronteras-programados');
+		return Response.BaseGet(perfil,'intercambios','todas-fronteras-programados');
 	}
 
 }
 class Transporte{
   
 	static GetEnergiaNoSuministradaEns(perfil){
-		return this.BaseGet(perfil,'energia-no-suministrada-ens');
+		return Response.BaseGet(perfil,'transporte','energia-no-suministrada-ens');
 	}
 	static GetIndiceIndisponibilidad(perfil){
-		return this.BaseGet(perfil,'indice-indisponibilidad');
+		return Response.BaseGet(perfil,'transporte','indice-indisponibilidad');
 	}
 	static GetTiempoInterrupcionMedioTim(perfil){
-		return this.BaseGet(perfil,'tiempo-interrupcion-medio-tim');
+		return Response.BaseGet(perfil,'transporte','tiempo-interrupcion-medio-tim');
 	}
 	static GetKilometrosLineas(perfil){
-		return this.BaseGet(perfil,'kilometros-lineas');
+		return Response.BaseGet(perfil,'transporte','kilometros-lineas');
 	}
 	static GetIndiceDisponibilidad(perfil){
-		return this.BaseGet(perfil,'indice-disponibilidad');
+		return Response.BaseGet(perfil,'transporte','indice-disponibilidad');
 	}
 	static GetNumeroCortes(perfil){
-		return this.BaseGet(perfil,'numero-cortes');
+		return Response.BaseGet(perfil,'transporte','numero-cortes');
 	}
 	static GetEnsTim(perfil){
-		return this.BaseGet(perfil,'ens-tim');
+		return Response.BaseGet(perfil,'transporte','ens-tim');
 	}
 	static GetIndiceDisponibilidadTotal(perfil){
-		return this.BaseGet(perfil,'indice-disponibilidad-total');
+		return Response.BaseGet(perfil,'transporte','indice-disponibilidad-total');
 	}
 
 
 }
 class Mercados{
 	static GetComponentesPrecioEnergiaCierreDesglose(perfil){
-		return this.BaseGet(perfil,'componentes-precio-energia-cierre-desglose');
+		return Response.BaseGet(perfil,'mercados','componentes-precio-energia-cierre-desglose');
 	}
 	static GetComponentesPrecio(perfil){
-		return this.BaseGet(perfil,'componentes-precio');
+		return Response.BaseGet(perfil,'mercados','componentes-precio');
 	}
 	static GetEnergiaGestionadaServiciosAjuste(perfil){
-		return this.BaseGet(perfil,'energia-gestionada-servicios-ajuste');
+		return Response.BaseGet(perfil,'mercados','energia-gestionada-servicios-ajuste');
 	}
 	static GetEnergiaRestricciones(perfil){
-		return this.BaseGet(perfil,'energia-restricciones');
+		return Response.BaseGet(perfil,'mercados','energia-restricciones');
 	}
 	static GetPreciosRestricciones(perfil){
-		return this.BaseGet(perfil,'precios-restricciones');
+		return Response.BaseGet(perfil,'mercados','precios-restricciones');
 	}
 	static GetReservaPotenciaAdicional(perfil){
-		return this.BaseGet(perfil,'reserva-potencia-adicional');
+		return Response.BaseGet(perfil,'mercados','reserva-potencia-adicional');
 	}
 	static GetBandaRegulacionSecundaria(perfil){
-		return this.BaseGet(perfil,'banda-regulacion-secundaria');
+		return Response.BaseGet(perfil,'mercados','banda-regulacion-secundaria');
 	}
 	static GetEnergiaPreciosRegulacionSecundaria(perfil){
-		return this.BaseGet(perfil,'energia-precios-regulacion-secundaria');
+		return Response.BaseGet(perfil,'mercados','energia-precios-regulacion-secundaria');
 	}
 	static GetEnergiaPreciosRegulacionTerciaria(perfil){
-		return this.BaseGet(perfil,'energia-precios-regulacion-terciaria');
+		return Response.BaseGet(perfil,'mercados','energia-precios-regulacion-terciaria');
 	}
 	static GetEnergiaPreciosGestionDesvios(perfil){
-		return this.BaseGet(perfil,'energia-precios-gestion-desvios');
+		return Response.BaseGet(perfil,'mercados','energia-precios-gestion-desvios');
 	}
 	static GetCosteServiciosAjuste(perfil){
-		return this.BaseGet(perfil,'coste-servicios-ajuste');
+		return Response.BaseGet(perfil,'mercados','coste-servicios-ajuste');
 	}
 	static GetVolumenEnergiaServiciosAjusteVariacion(perfil){
-		return this.BaseGet(perfil,'volumen-energia-servicios-ajuste-variacion');
+		return Response.BaseGet(perfil,'mercados','volumen-energia-servicios-ajuste-variacion');
 	}
 	static GetPreciosMercadosTiempoReal(perfil){
-		return this.BaseGet(perfil,'precios-mercados-tiempo-real');
+		return Response.BaseGet(perfil,'mercados','precios-mercados-tiempo-real');
 	}
 	static GetEnergiaPreciosPonderadosGestionDesviosAntes(perfil){
-		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios-before');
+		return Response.BaseGet(perfil,'mercados','energia-precios-ponderados-gestion-desvios-before');
 	}
 	static GetEnergiaPreciosPonderadosGestionDesvios(perfil){
-		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios');
+		return Response.BaseGet(perfil,'mercados','energia-precios-ponderados-gestion-desvios');
 	}
 	static GetEnergiaPreciosPonderadosGersionDesviosDespues(perfil){
-		return this.BaseGet(perfil,'energia-precios-ponderados-gestion-desvios-after');
+		return Response.BaseGet(perfil,'mercados','energia-precios-ponderados-gestion-desvios-after');
 	}
 
 }
@@ -260,51 +260,100 @@ class Mercados{
 
 
 class Perfil{
-  static get Uri(){return 'apidatos.ree.es';}
+  static get Uri(){return 'https://apidatos.ree.es';}
   construct() {
 	this.Idioma=Idioma.Spanish;
-	this.GeoId=Null;
-	this.GeoLimit=Null;
-	this.Inicio=Null;
-	this.Fin=Null;
-	this.TimeTrunc=Null;
-	this.GeoTrunc=Null;
+	this.GeoId=null;
+	this.GeoLimit=null;
+	this.Inicio=null;
+	this.Fin=null;
+	this.TimeTrunc=null;
+	this.GeoTrunc=null;
 	  
   }
   GetQueryString(){
   	var strQuery='';
-	if(this.GeoId!=Null){
+	if(this.GeoId!=null){
 		strQuery+='geo_ids='+this.GeoId+'&';
 	}
-	if(this.GeoLimit!=Null){
+	if(this.GeoLimit!=null){
 		strQuery+='geo_limit='+this.GeoLimit+'&';
 	}
-	if(this.GeoTrunc!=Null){
+	if(this.GeoTrunc!=null){
 		strQuery+='geo_trunc='+this.GeoTrunc+'&';
 	}
-	if(this.TimeTrunc!=Null){
+	if(this.TimeTrunc!=null){
 		strQuery+='time_trunc='+this.TimeTrunc+'&';
 	}
-	if(this.Inicio!=Null){
-		strQuery+='start_date='+this.Inicio.toISOString()+'&';
+	  if (this.Inicio != null) {
+		  strQuery += 'start_date=' + this.Inicio.toISOString() + '&';
 	}
-	if(this.Fin!=Null){
+	if(this.Fin!=null){
 		strQuery+='end_date='+this.Fin.toISOString()+'&';
 	}
-	return strQuery!=''?  strQuery.substring(0,strQuery.length-1):Null;
+	return strQuery!=''?  strQuery.substring(0,strQuery.length-1):null;
   
   }
   
   GetUrl(categoria,widget){
 	  // /{lang}/datos/{category}/{widget}?[query]
-	var lang=this.Idioma==Null?Idioma.Spanish:this.Idioma;
+	var lang=this.Idioma==null?Idioma.Spanish:this.Idioma;
   	var strUrl= Perfil.Uri+'/'+lang+'/datos/'+categoria+'/'+widget;
 	var strQuery=this.GetQueryString();
-	if(strQuery!=Null){
+	if(strQuery!=null){
 		strUrl+='?'+strQuery;
-	}
+	  }
+
 	 return strUrl;
-  }
+	}
+
+	static  GetPrice(date) {
+		var perfil = new Perfil();
+
+		perfil.Inicio = new Date(date);
+		perfil.Inicio.setHours(perfil.Inicio.getHours() - 1);
+		perfil.Fin = date;
+		perfil.TimeTrunc = TimeTrunc.Hour;
+		return Mercados.GetPreciosMercadosTiempoReal(perfil).then(resp => resp.included[0].attributes.values[0].value);
+	}
+	static GetPriceKwH(date) {
+		return Perfil.GetPrice(date).then(resp =>Number( Number(resp / 1000).toFixed(5)));
+	}
+	static get GetPriceNow() {
+		return Perfil.GetPrice(new Date(Date.now()));
+	}
+
+	static get GetPriceNowKwH() {
+		return Perfil.GetPriceKwH(new Date(Date.now()));
+	}
+	static async GetDay(dateNow) {
+	
+			var date = null;
+			var prices = [];
+
+			for (var i = 0; i < 24; i++) {
+				date = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), i, 0, 0, 0);
+				prices[i] = await Perfil.GetPrice(date);
+
+			}
+			return prices;
+	
+	}
+	static async GetDayKwH(dateNow) {
+	
+			var date = null;
+			var prices = [];
+
+			for (var i = 0; i < 24; i++) {
+				date = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), i, 0, 0, 0);
+				prices[i] = await Perfil.GetPriceKwH(date);
+
+			}
+			return prices;
+
+	}
+
+
 }
 
 class GeoTrunc{
