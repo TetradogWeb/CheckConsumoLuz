@@ -10,7 +10,7 @@ $(function () {
         if (window.localStorage) {
             //puedo guardar y cargar
             if (localStorage.getItem(today) !== null) {
-                getPrices = Promise.resolve(localStorage.getItem(today));
+                getPrices = Promise.resolve(localStorage.getItem(today)).split(',');
             } else {
                 getPrices = Perfil.GetDayKwH(date);
             }
@@ -25,7 +25,7 @@ $(function () {
             localStorage.setItem(today, prices);
 
         }
-        return prices.split(',');
+        return prices;
     }
 
     async function Load(isFirstTime = true) {
@@ -39,10 +39,10 @@ $(function () {
 
 
 
-        $("#estufa400").html(priceEstufa400 + " €/hora");
+        $("#estufa400").html(priceEstufa400 + " â‚¬/hora");
 
-        $("#estufa800").html((priceEstufa400*2) + " €/hora");
-        $("#estufa1200").html((priceEstufa400*3) + " €/hora");
+        $("#estufa800").html((priceEstufa400*2) + " â‚¬/hora");
+        $("#estufa1200").html((priceEstufa400*3) + " â‚¬/hora");
         //si es la primera vez
         if (isFirstTime) {
             //cargo los elementos
