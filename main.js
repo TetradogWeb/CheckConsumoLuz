@@ -10,7 +10,7 @@ $(function () {
         if (window.localStorage) {
             //puedo guardar y cargar
             if (localStorage.getItem(today) !== null) {
-                getPrices = Promise.resolve(localStorage.getItem(today)).split(',');
+                getPrices = Promise.resolve(localStorage.getItem(today).split(','));
             } else {
                 getPrices = Perfil.GetDayKwH(date);
             }
