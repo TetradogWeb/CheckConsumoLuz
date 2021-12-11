@@ -3,7 +3,7 @@
 
 class Response{
 	static BaseGet(perfil,widget){
-		var strUrl=peril.GetUrl(this.constructor.name,widget);
+		var strUrl=perfil.GetUrl(this.constructor.name,widget);
 		return fetch(strUrl).then(response => response.json());
 	
 	}
@@ -260,7 +260,7 @@ class Mercados{
 
 
 class Perfil{
-  static get URI(){return 'apidatos.ree.es';}
+  static get Uri(){return 'apidatos.ree.es';}
   construct() {
 	this.Idioma=Idioma.Spanish;
 	this.GeoId=Null;
@@ -298,7 +298,7 @@ class Perfil{
   GetUrl(categoria,widget){
 	  // /{lang}/datos/{category}/{widget}?[query]
 	var lang=this.Idioma==Null?Idioma.Spanish:this.Idioma;
-  	var strUrl= $"{Perfil.URL}/{lang}/datos/{categoria}/{widget}";
+  	var strUrl= Perfil.Uri+'/'+lang+'/datos/'+categoria+'/'+widget;
 	var strQuery=this.GetQueryString();
 	if(strQuery!=Null){
 		strUrl+='?'+strQuery;
