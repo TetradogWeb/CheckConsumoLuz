@@ -32,10 +32,10 @@ $(function () {
 
 
         var prices = await GetPrices();
-
-        var priceEstufa400 = Number( prices[new Date().getHours()-1] * 4 / 10).toFixed(2);
         var date = new Date();
-        $("#lblDia").html(date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear());
+        var priceEstufa400 = Number( prices[date.getHours()-1] * 4 / 10).toFixed(2);
+ 
+        $("#lblDia").html(date.getHours() + ":00 - " + date.getHours() + ":59 "+date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear());
 
 
 
