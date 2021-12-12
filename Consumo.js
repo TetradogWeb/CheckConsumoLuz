@@ -327,29 +327,33 @@ class Perfil{
 		return Perfil.GetPriceKwH(new Date(Date.now()));
 	}
 	static async GetDay(dateNow) {
-	
-			var date = null;
-			var prices = [];
+		
+			var perfil = new Perfil();
 
-			for (var i = 0; i < 24; i++) {
-				date = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), i, 0, 0, 0);
-				prices[i] = await Perfil.GetPrice(date);
+			perfil.Inicio = new Date(dateNow.getFullYear(),dateNow.getMonth(),dateNow.getDate());
+			perfil.Fin =  new Date(dateNow.getFullYear(),dateNow.getMonth(),dateNow.getDate(),23);
+			perfil.TimeTrunc = TimeTrunc.Hour;
+			return Mercados.GetPreciosMercadosTiempoReal(perfil).then(resp =>{
 
-			}
-			return prices;
+				var prices = [];
+				for(var i=0;i<resp.included[0].attributes.values.length;i++){
+					prices[i]=resp.included[0].attributes.values[i].value;
+				}
+				return prices;
+
+
+			} );
+		
 	
 	}
 	static async GetDayKwH(dateNow) {
-	
-			var date = null;
-			var prices = [];
+		return Perfil.GetDay(dateNow).then(prices=>{
+											for(var i=0;i<prices.length;i++){
+												prices[i]=Number( Number(prices[i] / 1000).toFixed(5));
+											}
+											return prices;
 
-			for (var i = 0; i < 24; i++) {
-				date = new Date(dateNow.getFullYear(), dateNow.getMonth(), dateNow.getDate(), i, 0, 0, 0);
-				prices[i] = await Perfil.GetPriceKwH(date);
-
-			}
-			return prices;
+										});
 
 	}
 

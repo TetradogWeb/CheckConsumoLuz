@@ -39,10 +39,10 @@ $(function () {
 
 
 
-        $("#estufa400").html(priceEstufa400 + " €/hora");
+        $("#estufa400").html(priceEstufa400 + " &euro;/hora");
 
-        $("#estufa800").html((priceEstufa400*2) + " €/hora");
-        $("#estufa1200").html((priceEstufa400*3) + " €/hora");
+        $("#estufa800").html((Number(priceEstufa400*2).toFixed(2)) + " &euro;/hora");
+        $("#estufa1200").html((Number(priceEstufa400*3).toFixed(2)) + " &euro;/hora");
         //si es la primera vez
         if (isFirstTime) {
             //cargo los elementos
@@ -56,11 +56,6 @@ $(function () {
     }
 
 
-    Load();
-
-
-
-
-
+ Load();
 
 });
