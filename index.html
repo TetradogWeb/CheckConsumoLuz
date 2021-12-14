@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="Consumo.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <style>
         body {
@@ -21,18 +20,9 @@
 <body>
     <h1>El Precio de la luz</h1>
     <h2 id="lblDia"></h2>
-    <div class="device">
-        <h3>Estufa 400W</h3>
-        <h4 id="estufa400"></h4>
-    </div>
-    <div class="device">
-        <h3>Estufa 800W</h3>
-        <h4 id="estufa800"></h4>
-    </div>
-    <div class="device">
-        <h3>Estufa 1200W</h3>
-        <h4 id="estufa1200"></h4>
-    </div>
+    <input type="button" onclick="()=>Load();" value="Refresh"></input>
+    <div id="lstDevices"></div>
+
 
 </body>
 </html>

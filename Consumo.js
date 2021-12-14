@@ -356,6 +356,36 @@ class Perfil{
 										});
 
 	}
+	static async  GetSavedPricesDay() {
+
+        var getPrices;
+        var prices;
+        var date = new Date();
+        var today = date.toDateString();
+
+        if (window.localStorage) {
+            //puedo guardar y cargar
+            if (localStorage.getItem(today) !== null) {
+                getPrices = Promise.resolve(localStorage.getItem(today).split(','));
+            } else {
+                getPrices = Perfil.GetDayKwH(date);
+            }
+
+
+        } else {
+            //consulto cada vez
+            getPrices = Perfil.GetDayKwH(date);
+        }
+        prices = await getPrices;
+        if (window.localStorage) {
+            localStorage.setItem(today, prices);
+
+        }
+        return prices;
+    }
+	static async GetSavedPriceNow(){
+		return (await Perfil.GetPricesDay())[new Date().getHours()-1];
+	}
 
 
 }

@@ -13,12 +13,16 @@ class Controller{
     SetParent(idParent,atTop=true){
         this.Remove();
         this.Parent=idParent;
-        if(atTop){
-            $('#'+this.Parent).append(this.GetHtml());
-        }else{
-            $('#'+this.Parent).prepend(this.GetHtml());
-        }
-        //pongo los eventos
+        return this.GetHtml().then(htmlContent=>{
+                                                if(atTop){
+                                                    $('#'+this.Parent).append(htmlContent);
+                                                }else{
+                                                    $('#'+this.Parent).prepend(htmlContent);
+                                                }
+                                                //pongo los eventos
+    
+         });
+    
     }
     Remove(){
         if(this.HasParent){
@@ -27,16 +31,28 @@ class Controller{
         }
     }
     GetHtml(){
-        return '<div id="'+this.IdContainer+'">'+this.GetContent()+'</div>';
+        var contentPromise=this.GetContent();
+        if(!(contentPromise instanceof Promise))
+        contentPromise=Promise.resolve(contentPromise);
+
+        return contentPromise.then(content=> '<div id="'+this.IdContainer+'">'+content+'</div>');
     }
     GetContent(){
         throw new Error("You must override this method");
     }
     Refresh(){
+        var contentPromise;
+        var result;
         if(this.HasParent){
+            contentPromise=this.GetContent();
+            if(!(contentPromise instanceof Promise))
+                contentPromise=Promise.resolve(contentPromise);
             $("#"+this.IdContainer).empty();
-            $("#"+this.IdContainer).append(this.GetContent());
+          result=contentPromise.then(content=>{  $("#"+this.IdContainer).append(content)});
+        }else{
+            result=Promise.resolve();
         }
+        return result;
     }
 
 
