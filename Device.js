@@ -1,5 +1,5 @@
-window.Import('Consumo.js');
-window.Import('Controller.js');
+window.Import(window.Root+'Consumo.js');
+window.Import(window.Root+'Controller.js');
 
 class Device extends Controller{
     constructor(){

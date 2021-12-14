@@ -16,8 +16,9 @@ window.Import = (url) => {
 $(function () {
 
     async function Init(){
-
-        window.Import('Device.js');
+        window.AppName="CheckConsumoLuz";
+        window.Root="https://tetradogWeb.github.io/"+window.AppName+"/";
+        window.Import(window.Root+'Device.js');
         window.Devices=null;
         await Load(true);
     }
