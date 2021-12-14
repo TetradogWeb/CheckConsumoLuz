@@ -2,11 +2,12 @@
 
 $(function () {
 
-    async function Init(){
 
-        window.Devices=null;
-        await Load(true);
-    }
+
+    window.Devices=null;
+    $("#btnRefresh").click(()=>Load());
+    Load(true);
+ 
     async function Load(isFirstTime = false) {
         var date=new Date();
         $("#lblDia").html(date.getHours() + ":00 - " + date.getHours() + ":59 "+date.getDate() + '/' + (date.getMonth()+1) + '/' + date.getFullYear());
@@ -34,7 +35,6 @@ $(function () {
                     window.Devices[i].Refresh();
 
             }
-            console.log("updated");
         }
 
     }
@@ -53,7 +53,7 @@ $(function () {
 
     }
 
-    Init();
+
 
 
 
