@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Consumo.js"></script>
+    <script type="text/javascript" src="Controller.js"></script>
+    <script type="text/javascript" src="Device.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <style>
         body {
@@ -20,7 +23,7 @@
 <body>
     <h1>El Precio de la luz</h1>
     <h2 id="lblDia"></h2>
-    <input type="button" onclick="()=>Load();" value="Refresh"></input>
+    <input type="button" onClick="()=>{Load();}" value="Refresh"></input>
     <div id="lstDevices"></div>
 
 

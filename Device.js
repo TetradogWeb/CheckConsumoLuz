@@ -1,5 +1,4 @@
-window.Import(window.Root+'Consumo.js');
-window.Import(window.Root+'Controller.js');
+
 
 class Device extends Controller{
     constructor(){
@@ -56,7 +55,7 @@ class Device extends Controller{
         if(window.localStorage){
             campos=localStorage.getItem(key);
             if(campos !== null){
-                if(campos.contains(Device.Separador)){
+                if(campos.includes(Device.Separador)){
                     campos=campos.split(Device.Separador);
                     for(var i=1;i<campos.length;i++){
                         devices[i]=new Device();

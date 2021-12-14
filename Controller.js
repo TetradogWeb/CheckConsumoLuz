@@ -1,7 +1,7 @@
 class Controller{
 
     constructor(prefix='controller'){
-        this.Id=prefix+new Date().getTime();
+        this.Id=prefix+Controller.GetId();
         this.Parent=null;
     }
     get HasParent(){
@@ -53,6 +53,9 @@ class Controller{
             result=Promise.resolve();
         }
         return result;
+    }
+    static GetId(){
+        return new Date().getTime()+""+Number(Math.random()*100).toFixed(0);
     }
 
 

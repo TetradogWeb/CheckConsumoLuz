@@ -384,7 +384,7 @@ class Perfil{
         return prices;
     }
 	static async GetSavedPriceNow(){
-		return (await Perfil.GetPricesDay())[new Date().getHours()-1];
+		return (await Perfil.GetSavedPricesDay())[new Date().getHours()-1];
 	}
 
 
